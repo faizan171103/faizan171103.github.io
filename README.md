@@ -1,5 +1,5 @@
 # faizan171103.github.io
-**Mohd Faizanul Haque - Data Analyst Portfolio**
+<h5>**Mohd Faizanul Haque - Data Analyst Portfolio**</h5>
 
 **About**
 
