@@ -1,7 +1,7 @@
 # faizan171103.github.io
-### Mohd Faizanul Haque - Data Analyst Portfolio
+# Mohd Faizanul Haque - Data Analyst Portfolio
 
-**About**
+## About
 
 Hi, I'm Mohd Faizanul Haque, a Data Analyst based in New Delhi, India. I have hands-on experience working with SQL, Python, Power BI, Snowflake, and Excel, gained through my Data Analytics internship and multiple end-to-end analytics projects.
 
