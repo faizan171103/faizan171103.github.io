@@ -13,13 +13,16 @@ This repository showcases my Data Analytics projects, technical skills, and expe
 
 ## Table of Contents
 
-About
-Portfolio Projects
-Hotel Analytics Data Warehouse
-Analysis of Customer Behavior
-Sales Analytics
-Skills
-Experience
-Education
-Resume
-Contact
+- [About](#about)
+- [Portfolio Projects](#portfolio-projects)
+  - [Hotel Analytics Data Warehouse](#hotel-analytics-data-warehouse)
+  - [Analysis of Customer Behavior](#analysis-of-customer-behavior)
+  - [Sales Analytics](#sales-analytics)
+- [Skills](#skills)
+- [Experience](#experience)
+- [Education](#education)
+- [Resume](#resume)
+- [Contact](#contact)
+
+---
+
