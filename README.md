@@ -11,4 +11,15 @@ My experience includes building ETL pipelines, data warehouses, analytical data 
 
 This repository showcases my Data Analytics projects, technical skills, and experience.
 
+## Table of Contents
 
+About
+Portfolio Projects
+Hotel Analytics Data Warehouse
+Analysis of Customer Behavior
+Sales Analytics
+Skills
+Experience
+Education
+Resume
+Contact
