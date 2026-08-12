@@ -176,6 +176,38 @@ Python, Pandas, NumPy, Matplotlib, Seaborn, Excel, Data Cleaning, Exploratory Da
 Python, Excel, Power BI, Pandas, NumPy, Matplotlib, Seaborn
 
 
+# Experience
+
+## Full-Stack Developer Intern (Data Analytics)
+
+**MetaCyrus.tech — New Delhi, India**  
+**July 2024 – September 2024**
+
+- Performed data handling, preprocessing, cleaning, and validation to improve dataset accuracy and reliability.
+- Organized and transformed datasets to support reporting workflows and data-driven decision-making.
+- Developed reports and dashboards to identify business trends, performance metrics, and operational insights.
+- Collaborated with cross-functional teams to understand requirements and deliver analytical solutions aligned with business needs.
+- Prepared structured datasets and improved the usability of reporting information.
+
+---
+
+# Education
+
+## Guru Gobind Singh Indraprastha University
+
+**Bachelor of Technology in Computer Science**  
+New Delhi, India
+
+**Graduated: July 2026**
+
+**CGPA: 7.9**
+# Contact
+
+📧 **Email:** mdf860111@gmail.com
+
+💻 **GitHub:** [faizan171103](https://github.com/faizan171103)
+
+📍 **New Delhi, India**
 
 
 
