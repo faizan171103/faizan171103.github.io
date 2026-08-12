@@ -25,4 +25,44 @@ This repository showcases my Data Analytics projects, technical skills, and expe
 - [Contact](#contact)
 
 ---
+## Hotel Analytics Data Warehouse
+
+**Goal:** Build an end-to-end data engineering and analytics pipeline that transforms raw hotel booking data into clean, validated, and business-ready datasets for reporting and decision-making.
+
+**Code:** [View SQL Pipeline](https://github.com/faizan171103/snowflake_bookings_analytics/blob/main/bookings_analystics.sql)
+
+**Repository:** [View Project Repository](https://github.com/faizan171103/snowflake_bookings_analytics)
+
+**Description:**  
+This project demonstrates an end-to-end data engineering workflow built on **Snowflake**, following the **Medallion Architecture (Bronze, Silver, Gold)**.
+
+The pipeline starts by ingesting raw hotel booking CSV files into the **Bronze layer**, preserving the original data. The **Silver layer** performs data cleaning, validation, and standardization, including handling invalid dates, correcting booking status values, validating email formats, normalizing text fields, and converting data types.
+
+The **Gold layer** transforms the cleaned data into analytics-ready tables, including a booking fact table, daily booking summaries, and city-level revenue aggregations.
+
+The curated Gold-layer data is then connected to **Power BI** to create interactive dashboards for analyzing revenue trends, booking performance, room types, city-level revenue, and operational KPIs.
+
+**What I Built:**
+- Designed a scalable **Bronze → Silver → Gold** data pipeline in Snowflake.
+- Built reusable **SQL transformations** for data cleaning, validation, and standardization.
+- Implemented data quality checks to identify missing values and inconsistent records.
+- Created analytics-ready Gold-layer tables and business aggregations.
+- Developed a clean booking fact table for analytical reporting.
+- Connected Snowflake data to **Power BI** for business intelligence and visualization.
+- Built dashboards to monitor revenue, bookings, room performance, city performance, and operational KPIs.
+
+**Key Analytics:**
+- Revenue trends and growth
+- Booking performance
+- City-level revenue
+- Room type performance
+- Booking cancellations
+- Operational KPIs
+
+**Skills:**  
+SQL, Data Cleaning, Data Validation, ETL, Data Transformation, Data Warehousing, Data Modeling, Data Quality, Business Intelligence, Data Visualization
+
+**Technology:**  
+Snowflake SQL, Power BI, CSV Data Ingestion, Medallion Architecture (Bronze, Silver, Gold)
+
 
