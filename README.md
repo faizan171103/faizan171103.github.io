@@ -1,4 +1,4 @@
-# Mohd Faizanul Haque
+# Mohd Faizanul Haque - Data Analyst Portfolio
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white)
@@ -26,35 +26,6 @@ I care about the same question at every layer of a project: *if a stakeholder bu
   - [Hotel Analytics Data Warehouse](#hotel-analytics-data-warehouse) — `Snowflake · SQL · Power BI`
   - [Sales Analytics](#sales-analytics) — `Python · Pandas · Excel · Power BI`
   - [Analysis of Customer Behavior](#analysis-of-customer-behavior) — `Python · SQL · Power BI`
-- [Skills](#skills)
-- [Experience](#experience)
-- [Education](#education)
-- [Resume](#resume)
-- [Contact](#contact)
-
----
-
-# faizan171103.github.io
-# Mohd Faizanul Haque - Data Analyst Portfolio
-
-## About
-
-Hi, I'm Mohd Faizanul Haque, a Data Analyst based in New Delhi, India. I have hands-on experience working with SQL, Python, Power BI, Snowflake, Databricks, dbt, and Excel, gained through my Data Analytics internship and multiple end-to-end analytics projects.
-
-I enjoy working with data from the initial stages of data cleaning, preprocessing, and validation through to analysis, data modeling, and visualization. I am particularly interested in using data to uncover trends, answer business questions, and support data-driven decision-making.
-
-My experience includes building ETL pipelines, data warehouses, analytical data models, SQL queries, and interactive Power BI dashboards. I have worked on projects involving e-commerce platforms, hotel bookings, customer behavior, sales performance, revenue analysis, and operational KPIs.
-
-This repository showcases my Data Analytics projects, technical skills, and experience.
-
-## Table of Contents
-
-- [About](#about)
-- [Portfolio Projects](#portfolio-projects)
-  - [Olist E-Commerce Analytics Platform](#olist-e-commerce-analytics-platform)
-  - [Hotel Analytics Data Warehouse](#hotel-analytics-data-warehouse)
-  - [Analysis of Customer Behavior](#analysis-of-customer-behavior)
-  - [Sales Analytics](#sales-analytics)
 - [Skills](#skills)
 - [Experience](#experience)
 - [Education](#education)
