@@ -1,24 +1,31 @@
-# faizan171103.github.io
-# Mohd Faizanul Haque - Data Analyst Portfolio
+# Mohd Faizanul Haque
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white)
+![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=flat&logo=snowflake&logoColor=white)
+![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=flat&logo=databricks&logoColor=white)
+![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat&logo=dbt&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
+![Excel](https://img.shields.io/badge/Excel-217346?style=flat&logo=microsoftexcel&logoColor=white)
+
+### Data Analyst & Analytics Engineer — New Delhi, India
+
+---
 
 ## About
 
-Hi, I'm Mohd Faizanul Haque, a Data Analyst based in New Delhi, India. I have hands-on experience working with SQL, Python, Power BI, Snowflake, Databricks, dbt, and Excel, gained through my Data Analytics internship and multiple end-to-end analytics projects.
+I'm a Data Analyst who works comfortably on both sides of the pipeline: building the warehouse layer that makes data trustworthy, and turning that data into findings someone can act on. My toolkit spans **SQL, Python, Power BI, Snowflake, Databricks, and dbt**, developed through a Data Analytics internship and a series of end-to-end analytics projects covering e-commerce, hospitality, retail, and customer behavior.
 
-I enjoy working with data from the initial stages of data cleaning, preprocessing, and validation through to analysis, data modeling, and visualization. I am particularly interested in using data to uncover trends, answer business questions, and support data-driven decision-making.
-
-My experience includes building ETL pipelines, data warehouses, analytical data models, SQL queries, and interactive Power BI dashboards. I have worked on projects involving e-commerce platforms, hotel bookings, customer behavior, sales performance, revenue analysis, and operational KPIs.
-
-This repository showcases my Data Analytics projects, technical skills, and experience.
+I care about the same question at every layer of a project: *if a stakeholder built a decision on this number, would it hold up?* That means writing dbt tests that actually fail when data breaks a rule, flagging inconsistencies between dashboard pages before they undermine trust in the whole report, and backing every recommendation with a quantified number rather than a vague direction.
 
 ## Table of Contents
 
 - [About](#about)
 - [Portfolio Projects](#portfolio-projects)
-  - [Olist E-Commerce Analytics Platform](#olist-e-commerce-analytics-platform)
-  - [Hotel Analytics Data Warehouse](#hotel-analytics-data-warehouse)
-  - [Analysis of Customer Behavior](#analysis-of-customer-behavior)
-  - [Sales Analytics](#sales-analytics)
+  - [Olist E-Commerce Analytics Platform](#olist-e-commerce-analytics-platform) — `Databricks · Unity Catalog · dbt · SQL · Power BI`
+  - [Hotel Analytics Data Warehouse](#hotel-analytics-data-warehouse) — `Snowflake · SQL · Power BI`
+  - [Sales Analytics](#sales-analytics) — `Python · Pandas · Excel · Power BI`
+  - [Analysis of Customer Behavior](#analysis-of-customer-behavior) — `Python · SQL · Power BI`
 - [Skills](#skills)
 - [Experience](#experience)
 - [Education](#education)
@@ -27,215 +34,108 @@ This repository showcases my Data Analytics projects, technical skills, and expe
 
 ---
 
-## Olist E-Commerce Analytics Platform
+## Portfolio Projects
 
-**Goal:** Build an end-to-end analytics engineering platform that transforms nine raw e-commerce source tables into a governed, business-ready dimensional model for reporting and decision-making.
+### Olist E-Commerce Analytics Platform
+
+**Goal:** Build a governed lakehouse that transforms nine raw Brazilian e-commerce tables into a dimensional model capable of supporting reliable, repeatable business reporting.
 
 **Code:** [View Repository](https://github.com/faizan171103/olist-databricks-lakehouse)
 
-**Repository:** [View Project Repository](https://github.com/faizan171103/olist-databricks-lakehouse)
+**Stack:** Databricks · Unity Catalog · dbt · SQL · Power BI · Medallion Architecture (Bronze/Silver/Gold)
 
-**Description:**
-This project demonstrates an end-to-end analytics engineering workflow built on **Databricks and Unity Catalog**, using **dbt** and following the **Medallion Architecture (Bronze, Silver, Gold)**.
-
-The pipeline ingests raw Olist e-commerce tables into the **Bronze layer**, preserving the original source data. The **Silver layer** standardizes types, handles nulls, normalizes strings, and filters invalid records through dbt staging models. The **Gold layer** transforms the cleaned data into a star schema — a central orders fact table joined to order items, payments, reviews, and customer, product, and seller dimensions.
-
-The curated Gold-layer data connects to **Power BI** to create dashboards analyzing revenue trends, sales performance, customer behavior, and product performance.
-
-**What I Built:**
-- Designed a scalable **Bronze → Silver → Gold** lakehouse pipeline in Databricks with Unity Catalog governance.
-- Built reusable **dbt transformations** for data cleaning, validation, and standardization.
-- Implemented dbt tests enforcing uniqueness and accepted values on every build.
-- Modeled a **star schema** (fact orders, order items, payments, reviews; customer, product, seller, date dimensions).
-- Connected the Gold layer to **Power BI** for business intelligence and visualization.
-- Identified and documented a data-quality inconsistency between two dashboard pages, rather than silently correcting it.
+Raw data lands untouched in Bronze, is standardized and validated in Silver, and rolls up into a proper star schema in Gold — `fact_orders`, `fact_order_items`, `fact_payments`, `fact_reviews` joined against `dim_customers`, `dim_products`, `dim_sellers`, and `dim_date`. dbt tests enforce uniqueness and accepted-value constraints as part of every build, not as an afterthought.
 
 **Key Analytics:**
-- Revenue and order trends
-- Customer segmentation and city-level spend
-- Product category performance
-- Payment method behavior
-- Repeat-customer rate
-- Review score distribution
+- **Retention diagnostics** — isolated a **3.05% repeat-customer rate** across 96K customers as the single highest-leverage metric in the dataset
+- **Category resilience analysis** — confirmed no single category exceeds 9.26% of revenue, ruling out concentration risk
+- **Geographic value mapping** — separated customer *volume* (São Paulo, Rio de Janeiro) from customer *value* (smaller high-spend cities like Loreto), a split a volume-only view would miss entirely
+- **Cross-page consistency audit** — caught and documented a real semantic drift between two dashboard pages' "top category" answers, before it could mislead a stakeholder
+- **dbt-enforced data quality** — automated uniqueness and accepted-value tests on `customer_id`, `order_id`, `product_id`, `order_status`, and `review_score`, run on every build
 
-**Skills:**
-SQL, Python, Data Cleaning, Data Validation, ETL, Data Transformation, Data Warehousing, Data Modeling, Data Quality, Business Intelligence, Data Visualization
-
-**Technology:**
-Databricks, Unity Catalog, dbt, Power BI, Medallion Architecture (Bronze, Silver, Gold)
+**Recommendation highlight:** Prioritize a repeat-purchase/retention model over any single-category optimization — at this AOV and order volume, moving repeat rate even a few points outweighs most acquisition-channel work.
 
 ---
 
-## Hotel Analytics Data Warehouse
+### Hotel Analytics Data Warehouse
 
-**Goal:** Build an end-to-end data engineering and analytics pipeline that transforms raw hotel booking data into clean, validated, and business-ready datasets for reporting and decision-making.
+**Goal:** Build an end-to-end Snowflake pipeline that turns raw hotel booking CSVs into business-ready datasets for revenue, occupancy, and operational reporting.
 
-**Code:** [View SQL Pipeline](https://github.com/faizan171103/snowflake_bookings_analytics/blob/main/bookings_analystics.sql)
+**Code:** [View Repository](https://github.com/faizan171103/snowflake_bookings_analytics)
 
-**Repository:** [View Project Repository](https://github.com/faizan171103/snowflake_bookings_analytics)
+**Stack:** Snowflake SQL · Medallion Architecture (Bronze/Silver/Gold) · Power BI
 
-**Description:**
-This project demonstrates an end-to-end data engineering workflow built on **Snowflake**, following the **Medallion Architecture (Bronze, Silver, Gold)**.
-
-The pipeline starts by ingesting raw hotel booking CSV files into the **Bronze layer**, preserving the original data. The **Silver layer** performs data cleaning, validation, and standardization, including handling invalid dates, correcting booking status values, validating email formats, normalizing text fields, and converting data types.
-
-The **Gold layer** transforms the cleaned data into analytics-ready tables, including a booking fact table, daily booking summaries, and city-level revenue aggregations.
-
-The curated Gold-layer data is then connected to **Power BI** to create interactive dashboards for analyzing revenue trends, booking performance, room types, city-level revenue, and operational KPIs.
-
-**What I Built:**
-- Designed a scalable **Bronze → Silver → Gold** data pipeline in Snowflake.
-- Built reusable **SQL transformations** for data cleaning, validation, and standardization.
-- Implemented data quality checks to identify missing values and inconsistent records.
-- Created analytics-ready Gold-layer tables and business aggregations.
-- Developed a clean booking fact table for analytical reporting.
-- Connected Snowflake data to **Power BI** for business intelligence and visualization.
-- Built dashboards to monitor revenue, bookings, room performance, city performance, and operational KPIs.
+Silver-layer transformations target specific, named failure modes rather than a generic cleaning pass — invalid dates, inconsistent booking-status values, malformed emails, and mixed data types are each handled explicitly, landing in a clean booking fact table plus daily and city-level aggregation tables in Gold.
 
 **Key Analytics:**
-- Revenue trends and growth
-- Booking performance
-- City-level revenue
-- Room type performance
-- Booking cancellations
-- Operational KPIs
+- **Cancellation & no-show diagnostics** — quantified a **58.2% combined failure rate** into an estimated **$230K** in unrealized revenue
+- **Booking-value ceiling analysis** — found no booking clears $600 against a $332.26 average, exposing a missing premium tier
+- **Room-type demand mix** — confirmed a near-even 34/33/32 split across Suite/Standard/Deluxe, ruling out price-driven preference and pointing to real upsell headroom
+- **City-level revenue concentration** — isolated five cities carrying consistent, repeatable volume against a long tail of near-zero markets
+- **Data-quality flagging** — traced a `(Blank)` gap in booking status and room type back to Silver before it could quietly bias segmentation
 
-**Skills:**
-SQL, Data Cleaning, Data Validation, ETL, Data Transformation, Data Warehousing, Data Modeling, Data Quality, Business Intelligence, Data Visualization
-
-**Technology:**
-Snowflake SQL, Power BI, CSV Data Ingestion, Medallion Architecture (Bronze, Silver, Gold)
+**Recommendation highlight:** Attack the cancellation/no-show rate first — deposits, confirmation reminders, and a tiered cancellation policy. Recovering even 10 points of that rate is worth an estimated $40K without acquiring a single new guest.
 
 ---
 
-## Analysis of Customer Behavior
+### Sales Analytics
 
-**Code & Analysis:**
+**Goal:** Analyze five years and 64,000+ sales records to identify revenue drivers, profitability trends, and regional/channel performance, and translate the findings into growth recommendations.
 
-- [View SQL Analysis](https://github.com/faizan171103/analysis_of_customer_behaviors/blob/main/customer_behavior_analysis.sql)
-- [View Python Analysis](https://github.com/faizan171103/analysis_of_customer_behaviors/blob/main/customer_behavior_of_shopping.ipynb)
-- [View Project Repository](https://github.com/faizan171103/analysis_of_customer_behaviors)
+**Code:** [View Repository](https://github.com/faizan171103/sales_analytics)
 
-**Goal:** Analyze customer shopping behavior to identify high-value customer segments, purchasing patterns, subscription trends, and discount usage, and translate these findings into actionable business recommendations.
+**Stack:** Python · Pandas · NumPy · Matplotlib · Seaborn · Excel · Power BI
 
-**Description:**
-This project analyzes **3,900+ customer transactions** using Python, SQL, and Power BI to understand purchasing behavior and identify factors that influence customer value and business performance.
-
-The analysis follows an end-to-end workflow, starting with **data preparation and exploratory analysis in Python**, followed by business-focused analysis using **SQL**, and ending with an interactive **Power BI dashboard** for reporting and visualization.
-
-The analysis examines customer spending, gender-based revenue, subscription behavior, discount usage, product performance, shipping preferences, customer loyalty, and revenue contribution across age groups.
-
-Customers are also segmented into **New, Returning, and Loyal** groups based on their previous purchase history to better understand customer value and retention patterns.
-
-**What I Built:**
-- Cleaned and prepared customer transaction data using **Python and Pandas**.
-- Performed exploratory data analysis (EDA) to identify purchasing patterns and trends.
-- Analyzed **3,900+ customer transactions** using SQL.
-- Used advanced SQL techniques including **CTEs, subqueries, CASE statements, aggregate functions, and window functions**.
-- Compared spending and revenue between subscribed and non-subscribed customers.
-- Identified products with high discount utilization and strong customer demand.
-- Segmented customers into **New, Returning, and Loyal** groups based on previous purchases.
-- Analyzed repeat-buyer subscription behavior to understand potential retention opportunities.
-- Compared revenue contribution across customer age groups.
-- Developed an interactive **Power BI dashboard** to communicate KPIs, customer trends, product performance, and purchasing behavior.
-
-**Key Business Questions:**
-- Do subscribed customers spend more than non-subscribers?
-- Which customer segments generate the most revenue?
-- Which products have the highest demand and discount usage?
-- How does customer loyalty relate to subscription behavior?
-- Which age groups contribute the most revenue?
-- How does shipping preference relate to average purchase value?
-- What purchasing patterns can support customer retention strategies?
+An end-to-end Python-to-Power BI workflow: cleaning and EDA in a notebook, a validated CSV export, and a three-page executive dashboard covering trends, product/channel performance, and geographic customer insights.
 
 **Key Analytics:**
-- Customer segmentation
-- Customer spending and revenue analysis
-- Subscription behavior
-- Discount utilization
-- Product performance
-- Customer loyalty and repeat purchases
-- Age-group revenue analysis
-- Shipping behavior
-- Purchase patterns
+- **Channel profitability analysis** — found the Export channel generates only 14.6% of revenue but posts the **highest margin of the three channels (38.01%)**, exposing that the largest channel (Wholesale) is the least margin-efficient
+- **Revenue-vs-margin product audit** — identified that the two biggest revenue products (Product 26, Product 25) don't appear among the top-margin products, separating volume drivers from profit drivers
+- **Price-margin correlation testing** — confirmed profit margin does *not* track unit price the way expected, ruling out pricing tier as the primary margin driver
+- **Customer concentration check** — verified top-5 customer revenue sits under 5% of total revenue, confirming low concentration risk
+- **Regional performance mapping** — quantified California at 19.5% of total revenue (nearly double the next state) while isolating Northeast as the one region trailing meaningfully behind the rest
 
-**Skills:**
-Python, Pandas, SQL, Data Cleaning, Exploratory Data Analysis, Customer Segmentation, CTEs, Subqueries, CASE Statements, Window Functions, Data Visualization, Business Analysis, KPI Reporting
-
-**Technology:**
-Python, Pandas, SQL, Power BI, Jupyter Notebook
+**Recommendation highlight:** Shift investment toward the Export channel and audit pricing on the two highest-revenue, non-top-margin products — both are higher-leverage moves than trying to grow any single category further.
 
 ---
 
-## Sales Analytics
+### Analysis of Customer Behavior
 
-**Project Files:**
+**Goal:** Analyze 3,900+ customer transactions to identify high-value segments, purchasing patterns, subscription trends, and discount usage, and turn the findings into retention-focused recommendations.
 
-- [View Python Analysis](https://github.com/faizan171103/sales_analytics/blob/main/sales_analytics.ipynb)
-- [View Cleaned Dataset](https://github.com/faizan171103/sales_analytics/blob/main/Sales_data_after_EDA.csv)
-- [View Project Repository](https://github.com/faizan171103/sales_analytics)
+**Code:** [SQL Analysis](https://github.com/faizan171103/analysis_of_customer_behaviors/blob/main/customer_behavior_analysis.sql) · [Python Analysis](https://github.com/faizan171103/analysis_of_customer_behaviors/blob/main/customer_behavior_of_shopping.ipynb) · [Repository](https://github.com/faizan171103/analysis_of_customer_behaviors)
 
-**Goal:** Analyze five years of sales data to identify revenue drivers, profitability trends, seasonal demand patterns, and regional and channel performance, and provide recommendations to support business growth.
+**Stack:** Python · Pandas · SQL (CTEs, subqueries, window functions) · Power BI
 
-**Description:**
-This project analyzes **64,000+ sales records across five years** to understand sales performance, revenue trends, profitability, seasonal demand, regional performance, and sales-channel behavior.
-
-The project follows an end-to-end data analytics workflow, beginning with data preparation and exploratory analysis in **Python**, followed by data transformation and preparation for reporting, and ending with an interactive **Power BI dashboard**.
-
-The analysis focuses on identifying recurring sales patterns, understanding differences across regions and channels, and translating the findings into actionable recommendations for inventory planning, marketing, pricing, product mix, and regional expansion.
-
-**What I Built:**
-- Analyzed **64,000+ sales records covering five years**.
-- Cleaned and prepared sales data using **Python and Pandas**.
-- Performed exploratory data analysis to identify revenue and sales trends.
-- Analyzed regional and sales-channel performance.
-- Identified recurring seasonal patterns, including **May–June revenue peaks and January slowdowns**.
-- Evaluated product and profitability trends to identify revenue drivers and business risks.
-- Prepared cleaned data for visualization and reporting.
-- Developed an interactive **Power BI dashboard** to monitor sales KPIs, revenue trends, regional performance, and product performance.
-- Translated analytical findings into business recommendations for improving sales and profitability.
-
-**Key Business Questions:**
-- Which regions and channels generate the strongest sales performance?
-- Which products are the major revenue drivers?
-- How does sales performance change over time?
-- What seasonal patterns can be identified?
-- Which regions or channels represent potential business risks?
-- Where are the opportunities for revenue and market growth?
-- How can inventory, pricing, and marketing strategies be improved?
+A three-stage workflow — Python for cleaning and EDA, SQL for business-focused segmentation and loyalty analysis, Power BI for the interactive dashboard — segmenting customers into New, Returning, and Loyal groups to understand retention drivers.
 
 **Key Analytics:**
-- Revenue and sales performance
-- Regional performance
-- Sales-channel analysis
-- Product performance
-- Profitability trends
-- Seasonal demand patterns
-- Revenue drivers
-- Business growth opportunities
+- **Subscription-gap quantification** — isolated the **73% non-subscribed majority** as the single largest, zero-acquisition-cost growth lever in the dataset
+- **Category-reliance audit** — measured Clothing and Accessories at 70%+ of category revenue, exposing over-reliance on two of four categories
+- **Demographic breadth testing** — confirmed sales split close to evenly by gender and across age groups, ruling out narrow targeting as the right strategy
+- **New/Returning/Loyal segmentation** — built customer tiers directly from purchase history using SQL window functions, rather than relying on a single lifetime-value number
+- **Data-completeness check** — flagged a four-state location panel as a likely truncated view, applying a data-quality caveat before trusting the "top location" finding
 
-**Skills:**
-Python, Pandas, NumPy, Matplotlib, Seaborn, Excel, Data Cleaning, Exploratory Data Analysis, Trend Analysis, Business Analysis, KPI Reporting, Data Visualization
-
-**Technology:**
-Python, Excel, Power BI, Pandas, NumPy, Matplotlib, Seaborn
+**Recommendation highlight:** Launch a subscription-conversion campaign targeting the 73% non-subscribed base — the highest-leverage move available, since it compounds against an already-solid average purchase amount without new acquisition cost.
 
 ---
 
 ## Skills
 
-**Languages & Query:** SQL, Python, Pandas, NumPy
-**Platforms:** Snowflake, Databricks, Unity Catalog
-**Transformation & Modeling:** dbt, ETL, Medallion Architecture, Data Warehousing, Data Modeling
-**Visualization:** Power BI, Excel, Matplotlib, Seaborn
-**Other:** Data Cleaning, Data Validation, Data Quality, Exploratory Data Analysis, Customer Segmentation, Business Analysis, KPI Reporting
+| Category | Tools & Techniques |
+|---|---|
+| **Data Warehousing & Modeling** | Snowflake, Databricks, Unity Catalog, dbt, Medallion Architecture (Bronze/Silver/Gold), Dimensional/Star Schema |
+| **Languages** | SQL (CTEs, subqueries, window functions, CASE logic), Python (Pandas, NumPy) |
+| **Data Quality & Testing** | dbt tests, data validation, uniqueness & accepted-value constraints, reproducibility auditing |
+| **Visualization & BI** | Power BI, Matplotlib, Seaborn, interactive dashboard design |
+| **Analysis** | Exploratory Data Analysis, customer segmentation, cohort/retention thinking, trend and seasonality analysis |
+| **Tools** | Excel, Jupyter Notebook, Git/GitHub |
 
 ---
 
 ## Experience
 
 ### Full-Stack Developer Intern (Data Analytics)
-
 **MetaCyrus.tech — New Delhi, India**
 **July 2024 – September 2024**
 
@@ -249,26 +149,21 @@ Python, Excel, Power BI, Pandas, NumPy, Matplotlib, Seaborn
 
 ## Education
 
-### Guru Gobind Singh Indraprastha University
-
-**Bachelor of Technology in Computer Science**
+**Guru Gobind Singh Indraprastha University**
+Bachelor of Technology in Computer Science
 New Delhi, India
-
-**Graduated:** July 2026
-**CGPA:** 7.9
+Graduated: July 2026 · CGPA: 7.9
 
 ---
 
 ## Resume
 
-*(Add a link to your resume PDF here, e.g. `[Download Resume](resume.pdf)`)*
+A detailed resume is available on request — see [Contact](#contact) below.
 
 ---
 
 ## Contact
 
 📧 **Email:** mdf860111@gmail.com
-
 💻 **GitHub:** [faizan171103](https://github.com/faizan171103)
-
 📍 **New Delhi, India**
