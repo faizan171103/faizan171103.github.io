@@ -113,6 +113,69 @@ SQL, Data Cleaning, Data Validation, ETL, Data Transformation, Data Warehousing,
 **Technology:**
 Snowflake SQL, Power BI, CSV Data Ingestion, Medallion Architecture (Bronze, Silver, Gold)
 
+
+## Skills
+
+**Languages & Query:** SQL, Python, Pandas, NumPy
+**Platforms:** Snowflake, Databricks, Unity Catalog
+**Transformation & Modeling:** dbt, ETL, Medallion Architecture, Data Warehousing, Data Modeling
+**Visualization:** Power BI, Excel, Matplotlib, Seaborn
+**Other:** Data Cleaning, Data Validation, Data Quality, Exploratory Data Analysis, Customer Segmentation, Business Analysis, KPI Reporting
+
+
+## Sales Analytics
+
+**Project Files:**
+
+- [View Python Analysis](https://github.com/faizan171103/sales_analytics/blob/main/sales_analytics.ipynb)
+- [View Cleaned Dataset](https://github.com/faizan171103/sales_analytics/blob/main/Sales_data_after_EDA.csv)
+- [View Project Repository](https://github.com/faizan171103/sales_analytics)
+
+**Goal:** Analyze five years of sales data to identify revenue drivers, profitability trends, seasonal demand patterns, and regional and channel performance, and provide recommendations to support business growth.
+
+**Description:**
+This project analyzes **64,000+ sales records across five years** to understand sales performance, revenue trends, profitability, seasonal demand, regional performance, and sales-channel behavior.
+
+The project follows an end-to-end data analytics workflow, beginning with data preparation and exploratory analysis in **Python**, followed by data transformation and preparation for reporting, and ending with an interactive **Power BI dashboard**.
+
+The analysis focuses on identifying recurring sales patterns, understanding differences across regions and channels, and translating the findings into actionable recommendations for inventory planning, marketing, pricing, product mix, and regional expansion.
+
+**What I Built:**
+- Analyzed **64,000+ sales records covering five years**.
+- Cleaned and prepared sales data using **Python and Pandas**.
+- Performed exploratory data analysis to identify revenue and sales trends.
+- Analyzed regional and sales-channel performance.
+- Identified recurring seasonal patterns, including **May–June revenue peaks and January slowdowns**.
+- Evaluated product and profitability trends to identify revenue drivers and business risks.
+- Prepared cleaned data for visualization and reporting.
+- Developed an interactive **Power BI dashboard** to monitor sales KPIs, revenue trends, regional performance, and product performance.
+- Translated analytical findings into business recommendations for improving sales and profitability.
+
+**Key Business Questions:**
+- Which regions and channels generate the strongest sales performance?
+- Which products are the major revenue drivers?
+- How does sales performance change over time?
+- What seasonal patterns can be identified?
+- Which regions or channels represent potential business risks?
+- Where are the opportunities for revenue and market growth?
+- How can inventory, pricing, and marketing strategies be improved?
+
+**Key Analytics:**
+- Revenue and sales performance
+- Regional performance
+- Sales-channel analysis
+- Product performance
+- Profitability trends
+- Seasonal demand patterns
+- Revenue drivers
+- Business growth opportunities
+
+**Skills:**
+Python, Pandas, NumPy, Matplotlib, Seaborn, Excel, Data Cleaning, Exploratory Data Analysis, Trend Analysis, Business Analysis, KPI Reporting, Data Visualization
+
+**Technology:**
+Python, Excel, Power BI, Pandas, NumPy, Matplotlib, Seaborn
+
 ---
 
 ## Analysis of Customer Behavior
@@ -174,14 +237,6 @@ Python, Pandas, SQL, Power BI, Jupyter Notebook
 
 ---
 
-## Skills
-
-**Languages & Query:** SQL, Python, Pandas, NumPy
-**Platforms:** Snowflake, Databricks, Unity Catalog
-**Transformation & Modeling:** dbt, ETL, Medallion Architecture, Data Warehousing, Data Modeling
-**Visualization:** Power BI, Excel, Matplotlib, Seaborn
-**Other:** Data Cleaning, Data Validation, Data Quality, Exploratory Data Analysis, Customer Segmentation, Business Analysis, KPI Reporting
-
 ---
 
 ## Experience
@@ -198,61 +253,6 @@ Python, Pandas, SQL, Power BI, Jupyter Notebook
 - Prepared structured datasets and improved the usability of reporting information.
 
 ---
----
-
-## Sales Analytics
-
-**Project Files:**
-
-- [View Python Analysis](https://github.com/faizan171103/sales_analytics/blob/main/sales_analytics.ipynb)
-- [View Cleaned Dataset](https://github.com/faizan171103/sales_analytics/blob/main/Sales_data_after_EDA.csv)
-- [View Project Repository](https://github.com/faizan171103/sales_analytics)
-
-**Goal:** Analyze five years of sales data to identify revenue drivers, profitability trends, seasonal demand patterns, and regional and channel performance, and provide recommendations to support business growth.
-
-**Description:**
-This project analyzes **64,000+ sales records across five years** to understand sales performance, revenue trends, profitability, seasonal demand, regional performance, and sales-channel behavior.
-
-The project follows an end-to-end data analytics workflow, beginning with data preparation and exploratory analysis in **Python**, followed by data transformation and preparation for reporting, and ending with an interactive **Power BI dashboard**.
-
-The analysis focuses on identifying recurring sales patterns, understanding differences across regions and channels, and translating the findings into actionable recommendations for inventory planning, marketing, pricing, product mix, and regional expansion.
-
-**What I Built:**
-- Analyzed **64,000+ sales records covering five years**.
-- Cleaned and prepared sales data using **Python and Pandas**.
-- Performed exploratory data analysis to identify revenue and sales trends.
-- Analyzed regional and sales-channel performance.
-- Identified recurring seasonal patterns, including **May–June revenue peaks and January slowdowns**.
-- Evaluated product and profitability trends to identify revenue drivers and business risks.
-- Prepared cleaned data for visualization and reporting.
-- Developed an interactive **Power BI dashboard** to monitor sales KPIs, revenue trends, regional performance, and product performance.
-- Translated analytical findings into business recommendations for improving sales and profitability.
-
-**Key Business Questions:**
-- Which regions and channels generate the strongest sales performance?
-- Which products are the major revenue drivers?
-- How does sales performance change over time?
-- What seasonal patterns can be identified?
-- Which regions or channels represent potential business risks?
-- Where are the opportunities for revenue and market growth?
-- How can inventory, pricing, and marketing strategies be improved?
-
-**Key Analytics:**
-- Revenue and sales performance
-- Regional performance
-- Sales-channel analysis
-- Product performance
-- Profitability trends
-- Seasonal demand patterns
-- Revenue drivers
-- Business growth opportunities
-
-**Skills:**
-Python, Pandas, NumPy, Matplotlib, Seaborn, Excel, Data Cleaning, Exploratory Data Analysis, Trend Analysis, Business Analysis, KPI Reporting, Data Visualization
-
-**Technology:**
-Python, Excel, Power BI, Pandas, NumPy, Matplotlib, Seaborn
-
 
 ## Education
 
@@ -281,3 +281,4 @@ New Delhi, India
 📍 **New Delhi, India**
 💻 **GitHub:** [faizan171103](https://github.com/faizan171103)
 📍 **New Delhi, India**
+---
