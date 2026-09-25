@@ -174,6 +174,32 @@ Python, Pandas, SQL, Power BI, Jupyter Notebook
 
 ---
 
+## Skills
+
+**Languages & Query:** SQL, Python, Pandas, NumPy
+**Platforms:** Snowflake, Databricks, Unity Catalog
+**Transformation & Modeling:** dbt, ETL, Medallion Architecture, Data Warehousing, Data Modeling
+**Visualization:** Power BI, Excel, Matplotlib, Seaborn
+**Other:** Data Cleaning, Data Validation, Data Quality, Exploratory Data Analysis, Customer Segmentation, Business Analysis, KPI Reporting
+
+---
+
+## Experience
+
+### Full-Stack Developer Intern (Data Analytics)
+
+**MetaCyrus.tech — New Delhi, India**
+**July 2024 – September 2024**
+
+- Performed data handling, preprocessing, cleaning, and validation to improve dataset accuracy and reliability.
+- Organized and transformed datasets to support reporting workflows and data-driven decision-making.
+- Developed reports and dashboards to identify business trends, performance metrics, and operational insights.
+- Collaborated with cross-functional teams to understand requirements and deliver analytical solutions aligned with business needs.
+- Prepared structured datasets and improved the usability of reporting information.
+
+---
+---
+
 ## Sales Analytics
 
 **Project Files:**
@@ -227,32 +253,6 @@ Python, Pandas, NumPy, Matplotlib, Seaborn, Excel, Data Cleaning, Exploratory Da
 **Technology:**
 Python, Excel, Power BI, Pandas, NumPy, Matplotlib, Seaborn
 
----
-
-## Skills
-
-**Languages & Query:** SQL, Python, Pandas, NumPy
-**Platforms:** Snowflake, Databricks, Unity Catalog
-**Transformation & Modeling:** dbt, ETL, Medallion Architecture, Data Warehousing, Data Modeling
-**Visualization:** Power BI, Excel, Matplotlib, Seaborn
-**Other:** Data Cleaning, Data Validation, Data Quality, Exploratory Data Analysis, Customer Segmentation, Business Analysis, KPI Reporting
-
----
-
-## Experience
-
-### Full-Stack Developer Intern (Data Analytics)
-
-**MetaCyrus.tech — New Delhi, India**
-**July 2024 – September 2024**
-
-- Performed data handling, preprocessing, cleaning, and validation to improve dataset accuracy and reliability.
-- Organized and transformed datasets to support reporting workflows and data-driven decision-making.
-- Developed reports and dashboards to identify business trends, performance metrics, and operational insights.
-- Collaborated with cross-functional teams to understand requirements and deliver analytical solutions aligned with business needs.
-- Prepared structured datasets and improved the usability of reporting information.
-
----
 
 ## Education
 
