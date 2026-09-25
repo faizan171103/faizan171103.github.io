@@ -22,7 +22,7 @@ I care about the same question at every layer of a project: *if a stakeholder bu
 
 - [About](#about)
 - [Portfolio Projects](#portfolio-projects)
-  - [Olist E-Commerce Analytics Platform](#olist-e-commerce-analytics-platform) — `Databricks · Unity Catalog · dbt · SQL · Power BI`
+  - [Olist E-Commerce Analytics Platform](#olist-e-commerce-analytics-platform) — `Databricks · Unity Catalog · dbt · SQL · Power BI`· pyspark
   - [Hotel Analytics Data Warehouse](#hotel-analytics-data-warehouse) — `Snowflake · SQL · Power BI`
   - [Sales Analytics](#sales-analytics) — `Python · Pandas · Excel · Power BI`
   - [Analysis of Customer Behavior](#analysis-of-customer-behavior) — `Python · SQL · Power BI`
