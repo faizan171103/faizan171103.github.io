@@ -266,12 +266,6 @@ New Delhi, India
 
 ---
 
-## Resume
-
-*(Add a link to your resume PDF here, e.g. `[Download Resume](resume.pdf)`)*
-
----
-
 ## Contact
 
 📧 **Email:** mdf860111@gmail.com
